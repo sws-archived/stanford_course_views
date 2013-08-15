@@ -1118,7 +1118,7 @@ function stanford_course_views_views_default_views() {
   );
   $handler->display->display_options['filters']['field_s_course_component_value']['reduce_duplicates'] = TRUE;
   $handler->display->display_options['path'] = 'courses';
-
+  $handler->display->display_options['menu']['title'] = 'Courses'; 
   /* Display: Section Information */
   $handler = $view->new_display('block', 'Section Information', 'section_info');
   $handler->display->display_options['defaults']['title'] = FALSE;

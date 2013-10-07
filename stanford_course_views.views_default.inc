@@ -626,30 +626,6 @@ function stanford_course_views_views_default_views() {
     15 => 0,
     17 => 0,
   );
-  /* Filter criterion: Person title */
-  $handler->display->display_options['filters']['title_1']['id'] = 'title_1';
-  $handler->display->display_options['filters']['title_1']['table'] = 'node';
-  $handler->display->display_options['filters']['title_1']['field'] = 'title';
-  $handler->display->display_options['filters']['title_1']['relationship'] = 'field_s_course_person_target_id';
-  $handler->display->display_options['filters']['title_1']['ui_name'] = 'Person title';
-  $handler->display->display_options['filters']['title_1']['operator'] = 'contains';
-  $handler->display->display_options['filters']['title_1']['group'] = 1;
-  $handler->display->display_options['filters']['title_1']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['title_1']['expose']['operator_id'] = 'title_1_op';
-  $handler->display->display_options['filters']['title_1']['expose']['label'] = 'Search courses by instructor';
-  $handler->display->display_options['filters']['title_1']['expose']['operator'] = 'title_1_op';
-  $handler->display->display_options['filters']['title_1']['expose']['identifier'] = 'title_1';
-  $handler->display->display_options['filters']['title_1']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    13 => 0,
-    11 => 0,
-    9 => 0,
-    7 => 0,
-    5 => 0,
-    15 => 0,
-    17 => 0,
-  );
   /* Filter criterion: Field collection item: Year (field_s_course_section_year) */
   $handler->display->display_options['filters']['field_s_course_section_year_value']['id'] = 'field_s_course_section_year_value';
   $handler->display->display_options['filters']['field_s_course_section_year_value']['table'] = 'field_data_field_s_course_section_year';
@@ -1464,7 +1440,6 @@ function stanford_course_views_views_default_views() {
   );
   $handler->display->display_options['filters']['field_s_course_component_value']['reduce_duplicates'] = TRUE;
   $handler->display->display_options['block_description'] = 'Course Section Information';
-
 
   $export['courses'] = $view;
 

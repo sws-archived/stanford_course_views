@@ -1480,7 +1480,6 @@ function stanford_course_views_views_default_views() {
     'changed' => 'changed',
     'field_s_course_featured' => 'field_s_course_featured',
     'field_s_course_year' => 'field_s_course_year',
-    'field_s_course_english_req' => 'field_s_course_english_req',
     'nid' => 'nid',
     'edit_node' => 'edit_node',
     'view_node' => 'edit_node',
@@ -1552,11 +1551,6 @@ function stanford_course_views_views_default_views() {
       'separator' => '',
       'empty_column' => 0,
     ),
-    'field_s_course_english_req' => array(
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
     'nid' => array(
       'sortable' => 1,
       'default_sort_order' => 'asc',
@@ -1584,7 +1578,7 @@ function stanford_course_views_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h3><a href="https://sites.stanford.edu/english/admin/manage">Back to Manage All Content</a></h3>';
+  $handler->display->display_options['header']['area']['content'] = '<h3><a href="/admin/manage">Back to Manage All Content</a></h3>';
   $handler->display->display_options['header']['area']['format'] = 'content_editor_text_format';
   /* Field: Global: View result counter */
   $handler->display->display_options['fields']['counter']['id'] = 'counter';
@@ -1649,7 +1643,6 @@ function stanford_course_views_views_default_views() {
       'settings' => array(
         'show_all_tokens' => 0,
         'display_values' => array(
-          'stanford_course::field_s_course_english_req' => 'stanford_course::field_s_course_english_req',
           'stanford_course::field_s_course_featured' => 'stanford_course::field_s_course_featured',
         ),
       ),
@@ -1775,13 +1768,6 @@ function stanford_course_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_course_year']['id'] = 'field_s_course_year';
   $handler->display->display_options['fields']['field_s_course_year']['table'] = 'field_data_field_s_course_year';
   $handler->display->display_options['fields']['field_s_course_year']['field'] = 'field_s_course_year';
-  /* Field: Content: English Degree Requirements */
-  $handler->display->display_options['fields']['field_s_course_english_req']['id'] = 'field_s_course_english_req';
-  $handler->display->display_options['fields']['field_s_course_english_req']['table'] = 'field_data_field_s_course_english_req';
-  $handler->display->display_options['fields']['field_s_course_english_req']['field'] = 'field_s_course_english_req';
-  $handler->display->display_options['fields']['field_s_course_english_req']['type'] = 'taxonomy_term_reference_plain';
-  $handler->display->display_options['fields']['field_s_course_english_req']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_s_course_english_req']['multi_type'] = 'ul';
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
@@ -1878,29 +1864,6 @@ function stanford_course_views_views_default_views() {
     15 => 0,
     17 => 0,
   );
-  /* Filter criterion: Content: English Degree Requirements (field_s_course_english_req) */
-  $handler->display->display_options['filters']['field_s_course_english_req_tid']['id'] = 'field_s_course_english_req_tid';
-  $handler->display->display_options['filters']['field_s_course_english_req_tid']['table'] = 'field_data_field_s_course_english_req';
-  $handler->display->display_options['filters']['field_s_course_english_req_tid']['field'] = 'field_s_course_english_req_tid';
-  $handler->display->display_options['filters']['field_s_course_english_req_tid']['value'] = '';
-  $handler->display->display_options['filters']['field_s_course_english_req_tid']['group'] = 1;
-  $handler->display->display_options['filters']['field_s_course_english_req_tid']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_s_course_english_req_tid']['expose']['operator_id'] = 'field_s_course_english_req_tid_op';
-  $handler->display->display_options['filters']['field_s_course_english_req_tid']['expose']['label'] = 'English Degree Requirements';
-  $handler->display->display_options['filters']['field_s_course_english_req_tid']['expose']['operator'] = 'field_s_course_english_req_tid_op';
-  $handler->display->display_options['filters']['field_s_course_english_req_tid']['expose']['identifier'] = 'field_s_course_english_req_tid';
-  $handler->display->display_options['filters']['field_s_course_english_req_tid']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    13 => 0,
-    11 => 0,
-    9 => 0,
-    7 => 0,
-    5 => 0,
-    15 => 0,
-    17 => 0,
-  );
-  $handler->display->display_options['filters']['field_s_course_english_req_tid']['vocabulary'] = 'english_degree_requirements';
   /* Filter criterion: Content: Academic Year (field_s_course_year) */
   $handler->display->display_options['filters']['field_s_course_year_value']['id'] = 'field_s_course_year_value';
   $handler->display->display_options['filters']['field_s_course_year_value']['table'] = 'field_data_field_s_course_year';
